@@ -1,0 +1,21 @@
+{
+  "name": "typeScript_workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScript practice workspace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stsiwo/typeScript_workspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stsiwo/typeScript_workspace/issues"
+  },
+  "homepage": "https://github.com/stsiwo/typeScript_workspace#readme"
+}
