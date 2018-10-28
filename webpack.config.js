@@ -6,7 +6,7 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/index.js'
+    app: './src/index.ts'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -30,6 +30,12 @@ module.exports = {
   resolve: {
     mainFiles: ['index'],
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx']
-  }
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
+  module: {
+    rules: [
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+    ]
+  },
 }
