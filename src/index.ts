@@ -28,6 +28,8 @@ character.attack();
 
 **/
 
+/** decorator pattern 
+
 import BeverageABS from "./decorator/BeverageABS";
 import CondimentDecoratorABS from "./decorator/CondimentDecoratorABS";
 import Espresso from "./decorator/Espresso";
@@ -46,6 +48,34 @@ beverage = new Milk(beverage);
 
 console.log(beverage.description);
 console.log(beverage.cost);
+
+**/
+
+/** factory (factory method pattern) 
+    key ideas: dependency inversion: client depends on higher level abstraction rather than lower level concret class
+    : see below, istead of directly init concret pizza class, call create method of factory class and deligate its generation
+
+    factory method pattern: 
+      - define interface 
+      - its subclasses create its own concret class 
+      * this pattern lets a class defer instantiation to subclasses
+ **/
+import PizzaFactoryIF from "./factory/PizzaFactoryIF";
+import ChicagoPizzaFactory from "./factory/ChicagoPizzaFactory";
+import NYPizzaFactory from "./factory/NYPizzaFactory";
+import PizzaEnum from "./factory/PizzaEnum";
+import PizzaABS from "./factory/PizzaABS";
+
+// create chicago cheeze pizza test
+let pizza: PizzaABS;
+pizza = ChicagoPizzaFactory.createPizza(PizzaEnum.CHEEZE_PIZZA);
+
+console.log(pizza);
+
+pizza = NYPizzaFactory.createPizza(PizzaEnum.VEGGIE_PIZZA);
+
+console.log(pizza);
+
 
 
 
