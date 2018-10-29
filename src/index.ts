@@ -60,23 +60,47 @@ console.log(beverage.cost);
       - its subclasses create its own concret class 
       * this pattern lets a class defer instantiation to subclasses
  **/
-import PizzaFactoryIF from "./factory/PizzaFactoryIF";
-import ChicagoPizzaFactory from "./factory/ChicagoPizzaFactory";
-import NYPizzaFactory from "./factory/NYPizzaFactory";
-import PizzaEnum from "./factory/PizzaEnum";
-import PizzaABS from "./factory/PizzaABS";
 
-// create chicago cheeze pizza test
-let pizza: PizzaABS;
-pizza = ChicagoPizzaFactory.createPizza(PizzaEnum.CHEEZE_PIZZA);
+/* import PizzaFactoryIF from "./factory/PizzaFactoryIF"; */
+/* import ChicagoPizzaFactory from "./factory/ChicagoPizzaFactory"; */
+/* import NYPizzaFactory from "./factory/NYPizzaFactory"; */
+/* import PizzaEnum from "./factory/PizzaEnum"; */
+/* import PizzaABS from "./factory/PizzaABS"; */
 
-console.log(pizza);
+/* // create chicago cheeze pizza test */
+/* let pizza: PizzaABS; */
+/* pizza = ChicagoPizzaFactory.createPizza(PizzaEnum.CHEEZE_PIZZA); */
 
-pizza = NYPizzaFactory.createPizza(PizzaEnum.VEGGIE_PIZZA);
+/* console.log(pizza); */
 
-console.log(pizza);
+/* pizza = NYPizzaFactory.createPizza(PizzaEnum.VEGGIE_PIZZA); */
+
+/* console.log(pizza); */
+
+/** singleton pattern: 
+      - composite your self
+      - private constructor
+      - getMethod: return instance. (if this is first time access, init singleton object)
+
+      - useful: logging, configuration, factory:: apply throughout applicaiton like global variables but not drawback!!!
+      - no drawback compared with global variable:
+          - lazy loading
+          - name conflict 
+**/
+
+import Singleton from "./singleton/Singleton";
+
+let singleton = Singleton.getInstance();
+singleton.incrementCount();
+singleton.incrementCount();
+singleton.decrementCount();
+
+/* let misSingleton = new Singleton(); */
+
+console.log(singleton.counter);
 
 
 
+      
 
 
