@@ -88,16 +88,16 @@ console.log(beverage.cost);
           - name conflict 
 **/
 
-import Singleton from "./singleton/Singleton";
+/* import Singleton from "./singleton/Singleton"; */
 
-let singleton = Singleton.getInstance();
-singleton.incrementCount();
-singleton.incrementCount();
-singleton.decrementCount();
+/* let singleton = Singleton.getInstance(); */
+/* singleton.incrementCount(); */
+/* singleton.incrementCount(); */
+/* singleton.decrementCount(); */
 
-/* let misSingleton = new Singleton(); */
+/* [>let misSingleton = new Singleton();<] */
 
-console.log(singleton.counter);
+/* console.log(singleton.counter); */
 
 
 
